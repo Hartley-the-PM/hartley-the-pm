@@ -18,12 +18,24 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
     @media (max-width: 20em) {
       @content;
     } //0 - 320px
-  }
+  }  
   // Phone
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
       @content;
-    } //0 - 600px
+    } //600px
+  }  
+   // iPadxs
+   @if $breakpoint == ipadxs {
+    @media (max-width: 47.9375em) {
+      @content;
+    } //7670px
+  }
+  // iPad
+  @if $breakpoint == ipad {
+    @media (max-width: 50.9375em) {
+      @content;
+    } //8150px
   }
   // Table Portrait
   @if $breakpoint == tab-port {
@@ -31,11 +43,29 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
       @content;
     } //900px
   }
+    // Table Portrait2
+    @if $breakpoint == tab-port2 {
+      @media (max-width: 61.9375em) {
+        @content;
+      } //991px
+    }
+  // Table Landscape3
+  @if $breakpoint == tab-land3 {
+    @media (max-width: 66.375em) {
+      @content;
+    } //1062px
+  }
   // Table Landscape
   @if $breakpoint == tab-land {
     @media (max-width: 75em) {
       @content;
     } //1200px
+  }
+  // Table Landscape2
+  @if $breakpoint == tab-land2 {
+    @media (max-width: 77.5625em) {
+      @content;
+    } //1241px
   }
   // Big Desktop
   @if $breakpoint == big-desktop {

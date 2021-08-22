@@ -15,18 +15,12 @@
   right: 0;
   z-index: -1;
 
-  // If you want to set a background image on the hero section, uncomment these with yout custom image
-
-  /* background: url("/src/assets/[your-image].png");
-  background-position: center;
-  background-size: cover; */
-
   @include respond(phone) {
     padding: 0rem $default-font-size;
   }
 
   .hero-title {
-    font-size: 5.6rem;
+    font-size: 5.35rem;
     font-weight: 700;
     margin-bottom: 3.2rem;
     text-align: left;
@@ -34,13 +28,22 @@
     @include respond(tab-land) {
       font-size: 4rem;
     }
+    @include respond(tab-port2) {
+      font-size: 3.8rem;
+    }
     @include respond(tab-port) {
-      font-size: 3.6rem;
+      font-size: 3.8rem;
       text-align: center;
+    }
+    @include respond(ipad) {
+      font-size: 3.48rem;
+      line-height: 1.5;
+      text-align: left;
     }
     @include respond(phone) {
       font-size: 3.5rem;
       line-height: 1.5;
+      text-align: left;
     }
     @include respond(phone-xs) {
       font-size: 2.8rem;
@@ -54,6 +57,10 @@
       justify-content: center;
     }
 
+    span.cta-btn {
+      margin-top: 36px;
+    }
+
     & a {
       font-size: 2.4rem;
 
@@ -64,95 +71,144 @@
   }
 
   .hero-wrapper {
-    position: relative;
+    .sentence-wrapper {
+      position: relative;
 
-    .cycle-wrapper{
-      position: absolute;
-      bottom: 38px;
-      right: 226px;
-      width: 45%;
-      margin: 110px auto 0 auto;
-      font-family: 'Montserrat', sans-serif;
-      padding: 10px;
-    }
-  
-    .rw-sentence{
-      margin: 0;
-      text-align: left;
-    }
-  
-    .rw-sentence span{
-      color: $primary-color;
-      font-size: 200%;
-      font-weight: bold;
-    }
-  
-    .rw-words{
-      display: inline;
-      text-indent: 10px;
-    }
-  
-    .rw-words-1 span{
-      position: absolute;
-      opacity: 0;
-      overflow: hidden;
-      -webkit-animation: rotateWord 12s linear infinite 0s;
-      -ms-animation: rotateWord 12s linear infinite 0s;
-      animation: rotateWord 12s linear infinite 0s;
-    }
-  
-    .rw-words-1 span:nth-child(2) { 
-        -webkit-animation-delay: 3s; 
-      -ms-animation-delay: 3s; 
-      animation-delay: 3s; 
-    }
-  
-    .rw-words-1 span:nth-child(3) { 
-        -webkit-animation-delay: 6s; 
-      -ms-animation-delay: 6s; 
-      animation-delay: 6s; 
-    }
-  
-    .rw-words-1 span:nth-child(4) { 
-        -webkit-animation-delay: 9s; 
-      -ms-animation-delay: 9s; 
-      animation-delay: 9s; 
-    }
-  
-    .rw-words-1 span:nth-child(5) { 
-        -webkit-animation-delay: 12s; 
-      -ms-animation-delay: 12s; 
-      animation-delay: 12s; 
-    }
-  
-    @-webkit-keyframes rotateWord {
-        0% { opacity: 0; }
-        2% { opacity: 0; -webkit-transform: translateY(-30px); }
-      5% { opacity: 1; -webkit-transform: translateY(0px);}
-        17% { opacity: 1; -webkit-transform: translateY(0px); }
-      20% { opacity: 0; -webkit-transform: translateY(30px); }
-      80% { opacity: 0; }
-        100% { opacity: 0; }
-    }
-  
-    @-ms-keyframes rotateWord {
-        0% { opacity: 0; }
-        2% { opacity: 0; -ms-transform: translateY(-30px); }
-      5% { opacity: 1; -ms-transform: translateY(0px);}
-        17% { opacity: 1; -ms-transform: translateY(0px); }
-      20% { opacity: 0; -ms-transform: translateY(30px); }
-      80% { opacity: 0; }
-        100% { opacity: 0; }
-    }
-  
-    @keyframes rotateWord {
-        0% { opacity: 0; }
-        2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
-      5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
-        17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
-      20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
-      80% { opacity: 0; }
-        100% { opacity: 0; }
+      .cycle-wrapper{
+        position: absolute;
+        bottom: 56px;
+        right: -158px;
+        width: 45%;
+        margin: 110px auto 0 auto;
+        font-family: 'Montserrat', sans-serif;
+        padding: 10px;
+
+        @include respond(tab-land2) {
+          bottom: 55px;
+          right: -277px;
+        }
+        @include respond(tab-land) {
+          bottom: 39px;
+          right: -68px;
+        }
+        @include respond(tab-land3) {
+          bottom: 38px;
+          right: -115px;
+        }
+        @include respond(tab-port2) {
+          bottom: 38px;
+          right: -192px;
+        }
+        @include respond(tab-port) {
+          bottom: -10px;
+          right: 270px;
+        }
+        @include respond(ipad) {
+          bottom: -10px;
+          right: 247px;
+        }
+        @include respond(ipadxs) {
+          bottom: -10px;
+          right: 103px;
+        }
+        @include respond(phone) {
+          bottom: -10px;
+          right: 105px;
+        }
+        @include respond(phone-xs) {
+          bottom: -12px;
+          right: 87px;
+        }
+      }
+    
+      .rw-sentence{
+        margin: 0;
+        text-align: left;
+      }
+    
+      .rw-sentence {
+        color: $primary-color;
+        font-size: 5.6rem;
+        font-weight: bold;
+        white-space: nowrap;
+
+        @include respond(tab-land) {
+          font-size: 4rem;
+        }
+        @include respond(tab-port) {
+          font-size: 3.6rem;
+          text-align: center;
+        }
+        @include respond(phone) {
+          font-size: 3.5rem;
+          line-height: 1.5;
+        }
+        @include respond(phone-xs) {
+          font-size: 2.8rem;
+        }
+      }
+    
+      .rw-words {
+        display: inline;
+        text-indent: 10px;
+      }
+    
+      .rw-words-1 span{
+        position: absolute;
+        opacity: 0;
+        overflow: hidden;
+        -webkit-animation: rotateWord 9s linear infinite 0s;
+        -ms-animation: rotateWord 9s linear infinite 0s;
+        animation: rotateWord 9s linear infinite 0s;
+      }
+    
+      .rw-words-1 span:nth-child(2) { 
+          -webkit-animation-delay: 3s; 
+        -ms-animation-delay: 3s; 
+        animation-delay: 3s; 
+      }
+    
+      .rw-words-1 span:nth-child(3) { 
+          -webkit-animation-delay: 6s; 
+        -ms-animation-delay: 6s; 
+        animation-delay: 6s; 
+      }
+    
+      .rw-words-1 span:nth-child(4) { 
+          -webkit-animation-delay: 9s; 
+        -ms-animation-delay: 9s; 
+        animation-delay: 9s; 
+      }
+    
+      @-webkit-keyframes rotateWord {
+          0% { opacity: 0; }
+          2% { opacity: 0; -webkit-transform: translateY(-30px); }
+        5% { opacity: 1; -webkit-transform: translateY(0px);}
+          17% { opacity: 1; -webkit-transform: translateY(0px); }
+        20% { opacity: 0; -webkit-transform: translateY(30px); }
+        80% { opacity: 0; }
+          100% { opacity: 0; }
+      }
+    
+      @-ms-keyframes rotateWord {
+          0% { opacity: 0; }
+          2% { opacity: 0; -ms-transform: translateY(-30px); }
+        5% { opacity: 1; -ms-transform: translateY(0px);}
+          17% { opacity: 1; -ms-transform: translateY(0px); }
+        20% { opacity: 0; -ms-transform: translateY(30px); }
+        80% { opacity: 0; }
+          100% { opacity: 0; }
+      }
+    
+      @keyframes rotateWord {
+          0% { opacity: 0; }
+          2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+        5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+          17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+        20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+        80% { opacity: 0; }
+          100% { opacity: 0; }
+      }
     }
   }
 }

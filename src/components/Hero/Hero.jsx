@@ -27,24 +27,21 @@ const Header = () => {
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <div className="hero-wrapper">
             <h1 className="hero-title">
-              {title || 'Hi, my name is'}{' '}
-              <span className="text-color-main">{name || 'Hartley Shapiro.'}</span>
+              {title || "I'm Hartley,"}
+              {'    '}
+              <span className="text-color-main">{name || 'the product manager.'}</span>
               <br />
-              <span>
-                I create medical technology products <br />
-                that improves
+              <span className="sentence-wrapper">
+                I develop medical technology solutions that improve
+                <div className="cycle-wrapper">
+                  <div className="rw-sentence rw-words rw-words-1">
+                    <span>clinical practice.</span>
+                    <span>user experience.</span>
+                    <span>collaboration.</span>
+                  </div>
+                </div>
               </span>
             </h1>
-            <section className="cycle-wrapper">
-              <h2 className="rw-sentence">
-                <div className="rw-words rw-words-1">
-                  <span>clincal experience.</span>
-                  <span>patient outcomes.</span>
-                  <span>hospital costs</span>
-                  <span>your hospital.</span>
-                </div>
-              </h2>
-            </section>
           </div>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
